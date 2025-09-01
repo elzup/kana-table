@@ -11,7 +11,8 @@ API_PRETTY_FILE = API_DIR / "kana.pretty.json"
 API_KV_FILE = API_DIR / "kana-kv.json"
 API_KV_XSAMPA_FILE = API_DIR / "kana-kv-xsampa.json"
 README_FILE = Path("README.md")
-MERGED_FILE = Path("merged.md")
+FULL_MD_FILE = Path("kana-table-full.md")
+SIMPLE_MD_FILE = Path("kana-table-simple.md")
 
 VOWELS = ["a", "i", "ɯ", "e", "o"]
 
@@ -87,67 +88,53 @@ def generate_simple_table(md_table):
 
 
 def build_readme(data):
-    """Builds the README.md file."""
+    """Builds the main README.md file with a unified phonetic table."""
     print("Building README.md...")
     sounds = data["sounds"]
     c_order = data["consonant_order"]
 
-    content = "# kana-table\n\n> Japanese syllabary table\n> 発音に基づいた五十音表\n\n"
+    # --- README Header ---
+    content = "# kana-table\n\n"
+    content += "> Japanese syllabary table based on phonetics\n"
+    content += "> 発音に基づいた五十音表\n\n"
+    content += "This table groups kana by their consonant sound in IPA, providing a more phonetically consistent view than the standard Gojuon table.\n\n"
+    content += "For more details and other formats, see the [API directory](./api/v1/).\n\n"
 
-    # Vowels
-    vowel_sounds = [s for s in sounds if s["type"] == "vowel"]
-    content += "## 母音\n\n"
-    content += generate_table(vowel_sounds, ["V"], VOWELS) + "\n\n"
+    # --- Generate Unified Tables ---
+    all_sounds_table = generate_table(sounds, c_order, VOWELS)
+    simple_table = generate_simple_table(all_sounds_table)
 
-    # Consonants
-    type_map = {
-        "seion": "子音行（清音）",
-        "dakuon": "子音行（濁音）",
-        "handakuon": "子音行（半濁音）",
-    }
-    chokuon_sounds = [s for s in sounds if s["type"] in type_map]
-
-    for type_key, title in type_map.items():
-        type_sounds = [s for s in chokuon_sounds if s["type"] == type_key]
-        if type_sounds:
-            content += f"## {title}\n\n"
-            content += generate_table(type_sounds, c_order, VOWELS) + "\n\n"
-
-    # Yoon
-    yoon_sounds = [s for s in sounds if s["type"] == "yoon"]
-    yoon_header = {v: f"-j{v}" for v in VOWELS}
-    content += "## 拗音（補足付き）\n\n"
-    content += (
-        generate_table(yoon_sounds, c_order, VOWELS, yoon_header) + "\n\n"
-    )
-
-    # (Special symbols section can be added manually or from YAML)
+    content += "## Phonetic Kana Table (with IPA)\n\n"
+    content += all_sounds_table + "\n\n"
+    content += "## Phonetic Kana Table (Simple)\n\n"
+    content += simple_table + "\n"
 
     with open(README_FILE, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"Successfully created {README_FILE}")
 
 
-def build_merged_md(data):
-    """Builds the merged.md file."""
-    print("Building merged.md...")
+def build_table_mds(data):
+    """Builds separate Markdown files for the full and simple tables."""
+    print("Building full and simple Markdown tables...")
     sounds = data["sounds"]
     c_order = data["consonant_order"]
 
-    # Create a unified table with all sounds
-    # This version creates a single, non-duplicated table, which is an improvement.
-    all_sounds_table = generate_table(sounds, c_order, VOWELS)
+    # Generate the base table with IPA
+    full_table_content = generate_table(sounds, c_order, VOWELS)
 
-    simple_table = generate_simple_table(all_sounds_table)
+    # Write the full table file
+    with open(FULL_MD_FILE, "w", encoding="utf-8") as f:
+        f.write("### Full Table\n\n")
+        f.write(full_table_content + "\n")
+    print(f"Successfully created {FULL_MD_FILE}")
 
-    content = "### Full Table\n\n"
-    content += all_sounds_table + "\n\n"
-    content += "### Simple Table\n\n"
-    content += simple_table + "\n"
-
-    with open(MERGED_FILE, "w", encoding="utf-8") as f:
-        f.write(content)
-    print(f"Successfully created {MERGED_FILE}")
+    # Generate and write the simple table file
+    simple_table_content = generate_simple_table(full_table_content)
+    with open(SIMPLE_MD_FILE, "w", encoding="utf-8") as f:
+        f.write("### Simple Table\n\n")
+        f.write(simple_table_content + "\n")
+    print(f"Successfully created {SIMPLE_MD_FILE}")
 
 
 def build_json_api(data):
@@ -209,7 +196,7 @@ def main():
     try:
         data = load_data()
         build_readme(data)
-        build_merged_md(data)
+        build_table_mds(data)
         build_json_api(data)
         print("\nBuild process finished.")
     except FileNotFoundError:

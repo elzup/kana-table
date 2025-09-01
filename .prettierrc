@@ -1,0 +1,19 @@
+{
+  "printWidth": 80,
+  "yaml": {
+    "overrides": [
+      {
+        "files": "kana-data.yml",
+        "options": {
+          "printWidth": 999
+        }
+      }
+    ]
+  },
+  "json": {
+    "quoteProps": "preserve",
+    "trailingComma": "none",
+    "printWidth": 999,
+    "overrides": [{ "files": "./api/v1/*" }]
+  }
+}
