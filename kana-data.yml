@@ -1,0 +1,1242 @@
+# Sound data for kana-table. This is the single source of truth.
+
+# The order of consonants in this list determines the row order in the generated tables.
+consonant_order:
+  - V
+  - k
+  - s
+  - ɕ
+  - ts
+  - tɕ
+  - t
+  - n
+  - h
+  - ç
+  - ɸ
+  - m
+  - j
+  - ɾ
+  - w
+  - v
+  - ɡ
+  - z
+  - dʑ
+  - dz
+  - d
+  - b
+  - p
+  - ɲ
+  - kʲ
+  - ɡʲ
+  - bʲ
+  - pʲ
+  - mʲ
+  - ɾʲ
+
+sounds:
+  # Vowels
+  - { kana: 'あ', ipa: 'a', ipa_c: 'V', vowel: 'a', type: 'vowel', romaji: 'a' }
+  - { kana: 'い', ipa: 'i', ipa_c: 'V', vowel: 'i', type: 'vowel', romaji: 'i' }
+  - { kana: 'う', ipa: 'ɯ', ipa_c: 'V', vowel: 'ɯ', type: 'vowel', romaji: 'u' }
+  - { kana: 'え', ipa: 'e', ipa_c: 'V', vowel: 'e', type: 'vowel', romaji: 'e' }
+  - { kana: 'お', ipa: 'o', ipa_c: 'V', vowel: 'o', type: 'vowel', romaji: 'o' }
+
+  # Seion (voiceless consonants)
+  - {
+      kana: 'か',
+      ipa: 'ka',
+      ipa_c: 'k',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'ka',
+    }
+  - {
+      kana: 'けぃ',
+      ipa: 'ki',
+      ipa_c: 'k',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'ki',
+    }
+  - {
+      kana: 'く',
+      ipa: 'kɯ',
+      ipa_c: 'k',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'ku',
+    }
+  - {
+      kana: 'け',
+      ipa: 'ke',
+      ipa_c: 'k',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'ke',
+    }
+  - {
+      kana: 'こ',
+      ipa: 'ko',
+      ipa_c: 'k',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'ko',
+    }
+  - {
+      kana: 'さ',
+      ipa: 'sa',
+      ipa_c: 's',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'sa',
+    }
+  - {
+      kana: 'すぃ',
+      ipa: 'si',
+      ipa_c: 's',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'si',
+    }
+  - {
+      kana: 'す',
+      ipa: 'sɯ',
+      ipa_c: 's',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'su',
+    }
+  - {
+      kana: 'せ',
+      ipa: 'se',
+      ipa_c: 's',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'se',
+    }
+  - {
+      kana: 'そ',
+      ipa: 'so',
+      ipa_c: 's',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'so',
+    }
+  - {
+      kana: 'し',
+      ipa: 'ɕi',
+      ipa_c: 'ɕ',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'shi',
+    }
+  - {
+      kana: 'つぁ',
+      ipa: 'tsa',
+      ipa_c: 'ts',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'tsa',
+    }
+  - {
+      kana: 'つぃ',
+      ipa: 'tsi',
+      ipa_c: 'ts',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'tsi',
+    }
+  - {
+      kana: 'つ',
+      ipa: 'tsɯ',
+      ipa_c: 'ts',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'tsu',
+    }
+  - {
+      kana: 'つぇ',
+      ipa: 'tse',
+      ipa_c: 'ts',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'tse',
+    }
+  - {
+      kana: 'つぉ',
+      ipa: 'tso',
+      ipa_c: 'ts',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'tso',
+    }
+  - {
+      kana: 'ち',
+      ipa: 'tɕi',
+      ipa_c: 'tɕ',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'chi',
+    }
+  - {
+      kana: 'た',
+      ipa: 'ta',
+      ipa_c: 't',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'ta',
+    }
+  - {
+      kana: 'てぃ',
+      ipa: 'ti',
+      ipa_c: 't',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'ti',
+    }
+  - {
+      kana: 'とぅ',
+      ipa: 'tɯ',
+      ipa_c: 't',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'tu',
+    }
+  - {
+      kana: 'て',
+      ipa: 'te',
+      ipa_c: 't',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'te',
+    }
+  - {
+      kana: 'と',
+      ipa: 'to',
+      ipa_c: 't',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'to',
+    }
+  - {
+      kana: 'な',
+      ipa: 'na',
+      ipa_c: 'n',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'na',
+    }
+  - {
+      kana: 'に',
+      ipa: 'ɲi',
+      ipa_c: 'n',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'ni',
+    } # Note: [ɲi] is often grouped with 'n' row
+  - {
+      kana: 'ぬ',
+      ipa: 'nɯ',
+      ipa_c: 'n',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'nu',
+    }
+  - {
+      kana: 'ね',
+      ipa: 'ne',
+      ipa_c: 'n',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'ne',
+    }
+  - {
+      kana: 'の',
+      ipa: 'no',
+      ipa_c: 'n',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'no',
+    }
+  - {
+      kana: 'は',
+      ipa: 'ha',
+      ipa_c: 'h',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'ha',
+    }
+  - {
+      kana: 'ひ',
+      ipa: 'hi',
+      ipa_c: 'h',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'hi',
+    }
+  - {
+      kana: 'ふ',
+      ipa: 'hɯ',
+      ipa_c: 'h',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'fu',
+    } # Note: Often [ɸɯ]
+  - {
+      kana: 'へ',
+      ipa: 'he',
+      ipa_c: 'h',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'he',
+    }
+  - {
+      kana: 'ほ',
+      ipa: 'ho',
+      ipa_c: 'h',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'ho',
+    }
+  - {
+      kana: 'ひ',
+      ipa: 'çi',
+      ipa_c: 'ç',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'hi',
+    }
+  - {
+      kana: 'ふぁ',
+      ipa: 'ɸa',
+      ipa_c: 'ɸ',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'fa',
+    }
+  - {
+      kana: 'ふぃ',
+      ipa: 'ɸi',
+      ipa_c: 'ɸ',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'fi',
+    }
+  - {
+      kana: 'ふ',
+      ipa: 'ɸɯ',
+      ipa_c: 'ɸ',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'fu',
+    }
+  - {
+      kana: 'ふぇ',
+      ipa: 'ɸe',
+      ipa_c: 'ɸ',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'fe',
+    }
+  - {
+      kana: 'ふぉ',
+      ipa: 'ɸo',
+      ipa_c: 'ɸ',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'fo',
+    }
+  - {
+      kana: 'ま',
+      ipa: 'ma',
+      ipa_c: 'm',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'ma',
+    }
+  - {
+      kana: 'み',
+      ipa: 'mi',
+      ipa_c: 'm',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'mi',
+    }
+  - {
+      kana: 'む',
+      ipa: 'mɯ',
+      ipa_c: 'm',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'mu',
+    }
+  - {
+      kana: 'め',
+      ipa: 'me',
+      ipa_c: 'm',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'me',
+    }
+  - {
+      kana: 'も',
+      ipa: 'mo',
+      ipa_c: 'm',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'mo',
+    }
+  - {
+      kana: 'や',
+      ipa: 'ja',
+      ipa_c: 'j',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'ya',
+    }
+  - {
+      kana: 'ゆぃ',
+      ipa: 'ji',
+      ipa_c: 'j',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'yi',
+    }
+  - {
+      kana: 'ゆ',
+      ipa: 'jɯ',
+      ipa_c: 'j',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'yu',
+    }
+  - {
+      kana: 'ゆぇ',
+      ipa: 'je',
+      ipa_c: 'j',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'ye',
+    }
+  - {
+      kana: 'よ',
+      ipa: 'jo',
+      ipa_c: 'j',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'yo',
+    }
+  - {
+      kana: 'ら',
+      ipa: 'ɾa',
+      ipa_c: 'ɾ',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'ra',
+    }
+  - {
+      kana: 'り',
+      ipa: 'ɾi',
+      ipa_c: 'ɾ',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'ri',
+    }
+  - {
+      kana: 'る',
+      ipa: 'ɾɯ',
+      ipa_c: 'ɾ',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'ru',
+    }
+  - {
+      kana: 'れ',
+      ipa: 'ɾe',
+      ipa_c: 'ɾ',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 're',
+    }
+  - {
+      kana: 'ろ',
+      ipa: 'ɾo',
+      ipa_c: 'ɾ',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'ro',
+    }
+  - {
+      kana: 'わ',
+      ipa: 'wa',
+      ipa_c: 'w',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'wa',
+    }
+  - {
+      kana: 'うぃ',
+      ipa: 'wi',
+      ipa_c: 'w',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'wi',
+    }
+  - {
+      kana: 'うぅ',
+      ipa: 'wɯ',
+      ipa_c: 'w',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'wu',
+    }
+  - {
+      kana: 'うぇ',
+      ipa: 'we',
+      ipa_c: 'w',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 'we',
+    }
+  - {
+      kana: 'うぉ',
+      ipa: 'wo',
+      ipa_c: 'w',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'wo',
+    }
+  - {
+      kana: 'ヴァ',
+      ipa: 'va',
+      ipa_c: 'v',
+      vowel: 'a',
+      type: 'seion',
+      romaji: 'va',
+    }
+  - {
+      kana: 'ヴィ',
+      ipa: 'vi',
+      ipa_c: 'v',
+      vowel: 'i',
+      type: 'seion',
+      romaji: 'vi',
+    }
+  - {
+      kana: 'ヴ',
+      ipa: 'vu',
+      ipa_c: 'v',
+      vowel: 'ɯ',
+      type: 'seion',
+      romaji: 'vu',
+    }
+  - {
+      kana: 'ヴェ',
+      ipa: 've',
+      ipa_c: 'v',
+      vowel: 'e',
+      type: 'seion',
+      romaji: 've',
+    }
+  - {
+      kana: 'ヴォ',
+      ipa: 'vo',
+      ipa_c: 'v',
+      vowel: 'o',
+      type: 'seion',
+      romaji: 'vo',
+    }
+
+  # Dakuon (voiced consonants)
+  - {
+      kana: 'が',
+      ipa: 'ɡa',
+      ipa_c: 'ɡ',
+      vowel: 'a',
+      type: 'dakuon',
+      romaji: 'ga',
+    }
+  - {
+      kana: 'ぐぃ',
+      ipa: 'ɡi',
+      ipa_c: 'ɡ',
+      vowel: 'i',
+      type: 'dakuon',
+      romaji: 'gi',
+    }
+  - {
+      kana: 'ぐ',
+      ipa: 'ɡɯ',
+      ipa_c: 'ɡ',
+      vowel: 'ɯ',
+      type: 'dakuon',
+      romaji: 'gu',
+    }
+  - {
+      kana: 'げ',
+      ipa: 'ɡe',
+      ipa_c: 'ɡ',
+      vowel: 'e',
+      type: 'dakuon',
+      romaji: 'ge',
+    }
+  - {
+      kana: 'ご',
+      ipa: 'ɡo',
+      ipa_c: 'ɡ',
+      vowel: 'o',
+      type: 'dakuon',
+      romaji: 'go',
+    }
+  - {
+      kana: 'ざ',
+      ipa: 'za',
+      ipa_c: 'z',
+      vowel: 'a',
+      type: 'dakuon',
+      romaji: 'za',
+    }
+  - {
+      kana: 'ずぃ',
+      ipa: 'zi',
+      ipa_c: 'z',
+      vowel: 'i',
+      type: 'dakuon',
+      romaji: 'zi',
+    }
+  - {
+      kana: 'ず',
+      ipa: 'zɯ',
+      ipa_c: 'z',
+      vowel: 'ɯ',
+      type: 'dakuon',
+      romaji: 'zu',
+    }
+  - {
+      kana: 'ぜ',
+      ipa: 'ze',
+      ipa_c: 'z',
+      vowel: 'e',
+      type: 'dakuon',
+      romaji: 'ze',
+    }
+  - {
+      kana: 'ぞ',
+      ipa: 'zo',
+      ipa_c: 'z',
+      vowel: 'o',
+      type: 'dakuon',
+      romaji: 'zo',
+    }
+  - {
+      kana: 'じ',
+      ipa: 'dʑi',
+      ipa_c: 'dʑ',
+      vowel: 'i',
+      type: 'dakuon',
+      romaji: 'ji',
+    }
+  - {
+      kana: 'づぁ',
+      ipa: 'dza',
+      ipa_c: 'dz',
+      vowel: 'a',
+      type: 'dakuon',
+      romaji: 'dza',
+    }
+  - {
+      kana: 'づぃ',
+      ipa: 'dzi',
+      ipa_c: 'dz',
+      vowel: 'i',
+      type: 'dakuon',
+      romaji: 'dzi',
+    }
+  - {
+      kana: 'づ',
+      ipa: 'dzɯ',
+      ipa_c: 'dz',
+      vowel: 'ɯ',
+      type: 'dakuon',
+      romaji: 'zu',
+    }
+  - {
+      kana: 'づぇ',
+      ipa: 'dze',
+      ipa_c: 'dz',
+      vowel: 'e',
+      type: 'dakuon',
+      romaji: 'dze',
+    }
+  - {
+      kana: 'づぉ',
+      ipa: 'dzo',
+      ipa_c: 'dz',
+      vowel: 'o',
+      type: 'dakuon',
+      romaji: 'dzo',
+    }
+  - {
+      kana: 'だ',
+      ipa: 'da',
+      ipa_c: 'd',
+      vowel: 'a',
+      type: 'dakuon',
+      romaji: 'da',
+    }
+  - {
+      kana: 'でぃ',
+      ipa: 'di',
+      ipa_c: 'd',
+      vowel: 'i',
+      type: 'dakuon',
+      romaji: 'di',
+    }
+  - {
+      kana: 'どぅ',
+      ipa: 'dɯ',
+      ipa_c: 'd',
+      vowel: 'ɯ',
+      type: 'dakuon',
+      romaji: 'du',
+    }
+  - {
+      kana: 'で',
+      ipa: 'de',
+      ipa_c: 'd',
+      vowel: 'e',
+      type: 'dakuon',
+      romaji: 'de',
+    }
+  - {
+      kana: 'ど',
+      ipa: 'do',
+      ipa_c: 'd',
+      vowel: 'o',
+      type: 'dakuon',
+      romaji: 'do',
+    }
+  - {
+      kana: 'ば',
+      ipa: 'ba',
+      ipa_c: 'b',
+      vowel: 'a',
+      type: 'dakuon',
+      romaji: 'ba',
+    }
+  - {
+      kana: 'び',
+      ipa: 'bi',
+      ipa_c: 'b',
+      vowel: 'i',
+      type: 'dakuon',
+      romaji: 'bi',
+    }
+  - {
+      kana: 'ぶ',
+      ipa: 'bɯ',
+      ipa_c: 'b',
+      vowel: 'ɯ',
+      type: 'dakuon',
+      romaji: 'bu',
+    }
+  - {
+      kana: 'べ',
+      ipa: 'be',
+      ipa_c: 'b',
+      vowel: 'e',
+      type: 'dakuon',
+      romaji: 'be',
+    }
+  - {
+      kana: 'ぼ',
+      ipa: 'bo',
+      ipa_c: 'b',
+      vowel: 'o',
+      type: 'dakuon',
+      romaji: 'bo',
+    }
+
+  # Handakuon
+  - {
+      kana: 'ぱ',
+      ipa: 'pa',
+      ipa_c: 'p',
+      vowel: 'a',
+      type: 'handakuon',
+      romaji: 'pa',
+    }
+  - {
+      kana: 'ぴ',
+      ipa: 'pi',
+      ipa_c: 'p',
+      vowel: 'i',
+      type: 'handakuon',
+      romaji: 'pi',
+    }
+  - {
+      kana: 'ぷ',
+      ipa: 'pɯ',
+      ipa_c: 'p',
+      vowel: 'ɯ',
+      type: 'handakuon',
+      romaji: 'pu',
+    }
+  - {
+      kana: 'ぺ',
+      ipa: 'pe',
+      ipa_c: 'p',
+      vowel: 'e',
+      type: 'handakuon',
+      romaji: 'pe',
+    }
+  - {
+      kana: 'ぽ',
+      ipa: 'po',
+      ipa_c: 'p',
+      vowel: 'o',
+      type: 'handakuon',
+      romaji: 'po',
+    }
+
+  # Yoon (palatalized sounds)
+  - {
+      kana: 'きゃ',
+      ipa: 'kʲa',
+      ipa_c: 'kʲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'kya',
+    }
+  - {
+      kana: 'きぃ',
+      ipa: 'kʲi',
+      ipa_c: 'kʲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'kyi',
+    }
+  - {
+      kana: 'きゅ',
+      ipa: 'kʲɯ',
+      ipa_c: 'kʲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'kyu',
+    }
+  - {
+      kana: 'きぇ',
+      ipa: 'kʲe',
+      ipa_c: 'kʲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'kye',
+    }
+  - {
+      kana: 'きょ',
+      ipa: 'kʲo',
+      ipa_c: 'kʲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'kyo',
+    }
+  - {
+      kana: 'ぎゃ',
+      ipa: 'ɡʲa',
+      ipa_c: 'ɡʲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'gya',
+    }
+  - {
+      kana: 'ぎぃ',
+      ipa: 'ɡʲi',
+      ipa_c: 'ɡʲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'gyi',
+    }
+  - {
+      kana: 'ぎゅ',
+      ipa: 'ɡʲɯ',
+      ipa_c: 'ɡʲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'gyu',
+    }
+  - {
+      kana: 'ぎぇ',
+      ipa: 'ɡʲe',
+      ipa_c: 'ɡʲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'gye',
+    }
+  - {
+      kana: 'ぎょ',
+      ipa: 'ɡʲo',
+      ipa_c: 'ɡʲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'gyo',
+    }
+  - {
+      kana: 'しゃ',
+      ipa: 'ɕa',
+      ipa_c: 'ɕ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'sha',
+    }
+  - {
+      kana: 'しぃ',
+      ipa: 'ɕi',
+      ipa_c: 'ɕ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'shi',
+    } # Note: same as seion
+  - {
+      kana: 'しゅ',
+      ipa: 'ɕɯ',
+      ipa_c: 'ɕ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'shu',
+    }
+  - {
+      kana: 'しぇ',
+      ipa: 'ɕe',
+      ipa_c: 'ɕ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'she',
+    }
+  - {
+      kana: 'しょ',
+      ipa: 'ɕo',
+      ipa_c: 'ɕ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'sho',
+    }
+  - {
+      kana: 'じゃ',
+      ipa: 'dʑa',
+      ipa_c: 'dʑ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'ja',
+    }
+  - {
+      kana: 'じぃ',
+      ipa: 'dʑi',
+      ipa_c: 'dʑ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'ji',
+    } # Note: same as dakuon
+  - {
+      kana: 'じゅ',
+      ipa: 'dʑɯ',
+      ipa_c: 'dʑ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'ju',
+    }
+  - {
+      kana: 'じぇ',
+      ipa: 'dʑe',
+      ipa_c: 'dʑ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'je',
+    }
+  - {
+      kana: 'じょ',
+      ipa: 'dʑo',
+      ipa_c: 'dʑ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'jo',
+    }
+  - {
+      kana: 'ちゃ',
+      ipa: 'tɕa',
+      ipa_c: 'tɕ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'cha',
+    }
+  - {
+      kana: 'ちぃ',
+      ipa: 'tɕi',
+      ipa_c: 'tɕ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'chi',
+    } # Note: same as seion
+  - {
+      kana: 'ちゅ',
+      ipa: 'tɕɯ',
+      ipa_c: 'tɕ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'chu',
+    }
+  - {
+      kana: 'ちぇ',
+      ipa: 'tɕe',
+      ipa_c: 'tɕ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'che',
+    }
+  - {
+      kana: 'ちょ',
+      ipa: 'tɕo',
+      ipa_c: 'tɕ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'cho',
+    }
+  - {
+      kana: 'にゃ',
+      ipa: 'ɲa',
+      ipa_c: 'ɲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'nya',
+    }
+  - {
+      kana: 'にぃ',
+      ipa: 'ɲi',
+      ipa_c: 'ɲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'nyi',
+    }
+  - {
+      kana: 'にゅ',
+      ipa: 'ɲɯ',
+      ipa_c: 'ɲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'nyu',
+    }
+  - {
+      kana: 'にぇ',
+      ipa: 'ɲe',
+      ipa_c: 'ɲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'nye',
+    }
+  - {
+      kana: 'にょ',
+      ipa: 'ɲo',
+      ipa_c: 'ɲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'nyo',
+    }
+  - {
+      kana: 'ひゃ',
+      ipa: 'ça',
+      ipa_c: 'ç',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'hya',
+    }
+  - {
+      kana: 'ひぃ',
+      ipa: 'çi',
+      ipa_c: 'ç',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'hyi',
+    } # Note: same as seion
+  - {
+      kana: 'ひゅ',
+      ipa: 'çɯ',
+      ipa_c: 'ç',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'hyu',
+    }
+  - {
+      kana: 'ひぇ',
+      ipa: 'çe',
+      ipa_c: 'ç',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'hye',
+    }
+  - {
+      kana: 'ひょ',
+      ipa: 'ço',
+      ipa_c: 'ç',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'hyo',
+    }
+  - {
+      kana: 'びゃ',
+      ipa: 'bʲa',
+      ipa_c: 'bʲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'bya',
+    }
+  - {
+      kana: 'びぃ',
+      ipa: 'bʲi',
+      ipa_c: 'bʲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'byi',
+    }
+  - {
+      kana: 'びゅ',
+      ipa: 'bʲɯ',
+      ipa_c: 'bʲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'byu',
+    }
+  - {
+      kana: 'びぇ',
+      ipa: 'bʲe',
+      ipa_c: 'bʲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'bye',
+    }
+  - {
+      kana: 'びょ',
+      ipa: 'bʲo',
+      ipa_c: 'bʲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'byo',
+    }
+  - {
+      kana: 'ぴゃ',
+      ipa: 'pʲa',
+      ipa_c: 'pʲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'pya',
+    }
+  - {
+      kana: 'ぴぃ',
+      ipa: 'pʲi',
+      ipa_c: 'pʲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'pyi',
+    }
+  - {
+      kana: 'ぴゅ',
+      ipa: 'pʲɯ',
+      ipa_c: 'pʲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'pyu',
+    }
+  - {
+      kana: 'ぴぇ',
+      ipa: 'pʲe',
+      ipa_c: 'pʲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'pye',
+    }
+  - {
+      kana: 'ぴょ',
+      ipa: 'pʲo',
+      ipa_c: 'pʲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'pyo',
+    }
+  - {
+      kana: 'みゃ',
+      ipa: 'mʲa',
+      ipa_c: 'mʲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'mya',
+    }
+  - {
+      kana: 'みぃ',
+      ipa: 'mʲi',
+      ipa_c: 'mʲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'myi',
+    }
+  - {
+      kana: 'みゅ',
+      ipa: 'mʲɯ',
+      ipa_c: 'mʲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'myu',
+    }
+  - {
+      kana: 'みぇ',
+      ipa: 'mʲe',
+      ipa_c: 'mʲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'mye',
+    }
+  - {
+      kana: 'みょ',
+      ipa: 'mʲo',
+      ipa_c: 'mʲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'myo',
+    }
+  - {
+      kana: 'りゃ',
+      ipa: 'ɾʲa',
+      ipa_c: 'ɾʲ',
+      vowel: 'a',
+      type: 'yoon',
+      romaji: 'rya',
+    }
+  - {
+      kana: 'りぃ',
+      ipa: 'ɾʲi',
+      ipa_c: 'ɾʲ',
+      vowel: 'i',
+      type: 'yoon',
+      romaji: 'ryi',
+    }
+  - {
+      kana: 'りゅ',
+      ipa: 'ɾʲɯ',
+      ipa_c: 'ɾʲ',
+      vowel: 'ɯ',
+      type: 'yoon',
+      romaji: 'ryu',
+    }
+  - {
+      kana: 'りぇ',
+      ipa: 'ɾʲe',
+      ipa_c: 'ɾʲ',
+      vowel: 'e',
+      type: 'yoon',
+      romaji: 'rye',
+    }
+  - {
+      kana: 'りょ',
+      ipa: 'ɾʲo',
+      ipa_c: 'ɾʲ',
+      vowel: 'o',
+      type: 'yoon',
+      romaji: 'ryo',
+    }
