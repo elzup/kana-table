@@ -88,30 +88,43 @@ def generate_simple_table(md_table):
 
 
 def build_readme(data):
-    """Builds the main README.md file with a unified phonetic table."""
-    print("Building README.md...")
+    """Updates the tables within the main README.md file."""
+    print("Updating README.md...")
     sounds = data["sounds"]
     c_order = data["consonant_order"]
 
-    # --- README Header ---
-    content = "# kana-table\n\n"
-    content += "> Japanese syllabary table based on phonetics\n"
-    content += "> 発音に基づいた五十音表\n\n"
-    content += "This table groups kana by their consonant sound in IPA, providing a more phonetically consistent view than the standard Gojuon table.\n\n"
-    content += "For more details and other formats, see the [API directory](./api/v1/).\n\n"
-
     # --- Generate Unified Tables ---
-    all_sounds_table = generate_table(sounds, c_order, VOWELS)
-    simple_table = generate_simple_table(all_sounds_table)
+    full_table_content = generate_table(sounds, c_order, VOWELS)
+    simple_table_content = generate_simple_table(full_table_content)
 
-    content += "## Phonetic Kana Table (with IPA)\n\n"
-    content += all_sounds_table + "\n\n"
-    content += "## Phonetic Kana Table (Simple)\n\n"
-    content += simple_table + "\n"
+    try:
+        with open(README_FILE, "r", encoding="utf-8") as f:
+            readme_content = f.read()
+    except FileNotFoundError:
+        print(f"Error: {README_FILE} not found. Cannot update tables.")
+        return
+
+    # Replace the full table block
+    full_table_block = f"<!-- TABLE_START: full -->\n{full_table_content}\n<!-- TABLE_END: full -->"
+    readme_content = re.sub(
+        r"<!-- TABLE_START: full -->.*?<!-- TABLE_END: full -->",
+        full_table_block,
+        readme_content,
+        flags=re.DOTALL,
+    )
+
+    # Replace the simple table block
+    simple_table_block = f"<!-- TABLE_START: simple -->\n{simple_table_content}\n<!-- TABLE_END: simple -->"
+    readme_content = re.sub(
+        r"<!-- TABLE_START: simple -->.*?<!-- TABLE_END: simple -->",
+        simple_table_block,
+        readme_content,
+        flags=re.DOTALL,
+    )
 
     with open(README_FILE, "w", encoding="utf-8") as f:
-        f.write(content)
-    print(f"Successfully created {README_FILE}")
+        f.write(readme_content)
+    print(f"Successfully updated tables in {README_FILE}")
 
 
 def build_table_mds(data):

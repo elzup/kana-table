@@ -9,6 +9,8 @@ For more details and other formats, see the [API directory](./api/v1/).
 
 ## Phonetic Kana Table (with IPA)
 
+<!-- TABLE_START: full -->
+
 | IPA 子音 | a         | i         | ɯ         | e         | o         |
 | -------- | --------- | --------- | --------- | --------- | --------- |
 | V        | あ[a]     | い[i]     | う[ɯ]     | え[e]     | お[o]     |
@@ -42,7 +44,11 @@ For more details and other formats, see the [API directory](./api/v1/).
 | mʲ       | みゃ[mʲa] | みぃ[mʲi] | みゅ[mʲɯ] | みぇ[mʲe] | みょ[mʲo] |
 | ɾʲ       | りゃ[ɾʲa] | りぃ[ɾʲi] | りゅ[ɾʲɯ] | りぇ[ɾʲe] | りょ[ɾʲo] |
 
+<!-- TABLE_END: full -->
+
 ## Phonetic Kana Table (Simple)
+
+<!-- TABLE_START: simple -->
 
 | IPA 子音 | a    | i    | ɯ    | e    | o    |
 | -------- | ---- | ---- | ---- | ---- | ---- |
@@ -76,3 +82,45 @@ For more details and other formats, see the [API directory](./api/v1/).
 | pʲ       | ぴゃ | ぴぃ | ぴゅ | ぴぇ | ぴょ |
 | mʲ       | みゃ | みぃ | みゅ | みぇ | みょ |
 | ɾʲ       | りゃ | りぃ | りゅ | りぇ | りょ |
+
+<!-- TABLE_END: simple -->
+
+## Usage Example
+
+You can fetch and query the data using tools like `curl` and `jq`.
+
+### Fetching by IPA (`kana-kv.json`)
+
+To get the data for the IPA sound `bɯ` (ぶ):
+
+```bash
+$ curl -sL https://elzup.github.io/kana-table/api/v1/kana-kv.json | jq '."bɯ"'
+[
+  {
+    "kana": "ぶ",
+    "ipa_c": "b",
+    "vowel": "ɯ",
+    "type": "dakuon",
+    "romaji": "bu",
+    "x_sampa": "bM"
+  }
+]
+```
+
+### Fetching by X-SAMPA (`kana-kv-xsampa.json`)
+
+To get the data for the X-SAMPA sound `M` (う):
+
+```bash
+$ curl -sL https://elzup.github.io/kana-table/api/v1/kana-kv-xsampa.json | jq '.M'
+[
+  {
+    "kana": "う",
+    "ipa": "ɯ",
+    "ipa_c": "V",
+    "vowel": "ɯ",
+    "type": "vowel",
+    "romaji": "u"
+  }
+]
+```
